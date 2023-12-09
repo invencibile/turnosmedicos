@@ -1,0 +1,28 @@
+.reserva {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: large;
+    padding: 10px;
+}
+
+form label {
+    display: block;
+}
+form input {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: large;
+}
+.dia {
+    margin: 15px;
+    text-decoration: underline;
+}
+
+

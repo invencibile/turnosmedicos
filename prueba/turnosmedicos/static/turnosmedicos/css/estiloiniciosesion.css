@@ -1,0 +1,102 @@
+
+.form{
+     display: flex;
+    justify-content: center; 
+}
+
+form{
+margin-top: 2%;
+display: inline-flex;
+flex-direction: column;
+}
+
+
+label{
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+input{
+   
+    width: 450px;
+    height: 30px;
+
+}
+
+input.submit{
+    background-color:rgb(39, 39, 149);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+   
+
+}
+
+.contrasena{
+    font-size: 0.7em;
+    padding-top: 5px;
+    
+}
+
+.contrasena a{
+    text-decoration: none;
+}
+
+.contrasena a:hover{
+    text-decoration: underline;
+}
+
+.crearcuenta{
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+.crearcuenta a {
+    margin-left: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.grid-footer{
+    margin-top: 20%;
+}
+
+@media(min-width:300px) and (max-width:576px){
+
+    .form{
+        margin-bottom: 220px;  
+   }
+
+    input{
+        width: 280px;
+        height: 20px;
+    }
+
+    label{
+       font-size: 0.8em;
+    }
+
+    .crearcuenta{
+        font-size: 0.8em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

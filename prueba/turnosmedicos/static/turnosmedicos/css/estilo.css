@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "roboto";
+    color:rgb(52, 52, 164);
+ }
+
+ @font-face {
+    font-family: "roboto";
+    src: url(../css/fonts/Roboto-Regular.ttf);
+   
+ }
+
+
+/* PAGINA INICIO/INDEX */
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 100px 1fr 100px 1/2fr;
+    grid-template-areas: 
+      "header header header"
+      "nav nav nav"
+      "aside main main"
+      "consulta consulta consulta"
+      "footer footer footer";
+    grid-column-gap: 10px;
+
+}
+
+/* HEADER */
+.grid-header{
+    grid-area: header;
+    background-color: #FFE5E5;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.inicioregistro a {
+   text-decoration: none;
+   display: inline-flex;
+   padding-right: 30px;
+   font-size: 1.1em;
+} 
+
+
+.inicioregistro a:hover{
+    font-weight: bold;
+} 
+
+.logo{
+     width: 150px;
+     padding-left: 20px;
+     
+}
+.logo:hover{
+    transform: rotate(30deg) translateX(30px);
+}
+
+
+/* NAVBAR */
+
+.grid-nav{
+    grid-area: nav;
+    height: 65px; 
+    background-color: rgba(222, 225, 229, 0.495); 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+nav ul { 
+    display:flex;
+    align-items: center;  
+} 
+
+nav ul li{
+    display: inline-flex;
+    padding-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    color:rgb(52, 52, 164);
+}
+
+/* MAIN */
+
+.grid-section-main{
+    grid-area: main;
+    margin-top: 10px;
+}
+
+.grid-section-main img {
+    width: 98%;
+    height: 100%;
+}
+
+/* ASIDE */
+.grid-section-aside{
+    grid-area: aside;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.grid-section-aside div{
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.grid-section-aside div img{
+    width: 70%;
+}
+
+
+/* SECTION */
+.grid-section-consultas{
+    grid-area: consulta;
+    display: inline-flex;
+    background-color: rgba(222, 225, 229, 0.495);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.grid-section-consultas div{
+    display: inline-flex;
+}
+
+
+
+ .grid-section-consultas p{
+    height: 50px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center; 
+    font-size: 1.5em;
+    font-weight: bold;
+ 
+}
+
+.grid-section-consultas a{
+    display: inline-flex;
+    border-radius: 8px;
+    background-color: rgb(39, 39, 149);
+    color: WHITE;
+    font-size: 0.9em;
+    border: none;
+    margin-left: 20px;
+    width: 90px;
+    height: 40px;
+    text-decoration: none;
+    text-align: center;
+ }
+
+
+ 
+
+
+/* FOOTER */
+.grid-footer{
+    grid-area: footer;
+    background-color: #FFE5E5;
+    display: grid;
+    grid-template-columns: 1/2fr 1/2fr 1/2fr;
+    grid-template-rows: 80% 10%px;
+    grid-template-areas: 
+    "servicios ubicacion redes"
+    "copy copy copy";
+}
+
+.servicios{
+    grid-area: servicios;  
+    display: flex;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+
+.servicios h4{
+    text-decoration: underline;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+.servicios ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.servicios ul li {
+    display: flex;
+}
+
+.servicios ul li a {
+    text-decoration: none;
+    height: 25px;
+
+}
+.servicios ul li a:hover {
+    font-weight: bold;
+    color:rgb(52, 52, 164); 
+}
+
+.ubicacion{
+    grid-area: ubicacion;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+.ubicacion h4{
+    text-decoration: underline;
+    height: 25px;
+}
+
+.ubicacion p{
+    height: 25px;
+}
+
+.redes{
+    grid-area: redes;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+.redes h4{
+    text-decoration: underline;
+    height: 25px;
+}
+
+.copy{
+    grid-area: copy;
+    display: flex;
+    font-size: 0.7em;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+
+.whats{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    animation-name: icono;
+    animation-duration: 3s;
+    border-radius: 30px;
+}
+
+@keyframes icono{
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+        transform: scale(1)
+    }
+       
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        transform: scale(1.2);
+        border-radius: 60px;
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        transform: scale(1);
+      }
+    }
+    
+
+@media(min-width:300px) and (max-width:576px){
+
+    .inicioregistro {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+     } 
+
+    .inicioregistro a {
+        font-size: 1em;    
+     } 
+     
+
+    .logo{
+        width: 90px;
+        padding-left: 20px;
+    }
+
+    nav ul { 
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 150px 100px 1fr 1fr 100px 1/2fr;
+        grid-template-areas: 
+          "header header header"
+          "nav nav nav"
+          "main main main"
+          "aside aside aside"
+          "consulta consulta consulta"
+          "footer footer footer";
+    }
+
+    .grid-section-aside div img{
+        width: 45%;
+    }
+    .grid-section-main img {
+        width: 100%;
+    }
+
+       /* CONSULTAS */
+    .grid-section-consultas div{
+        display: inline-flex;
+    }
+    
+     .grid-section-consultas p{
+        font-size: 1.1em;
+        text-align:center;
+    }
+    
+    .grid-section-consultas a{
+        display: flex;
+        margin-left: 2%;
+        margin-right: 3%;
+        width: 70px;
+        height: 50px;
+        font-size: 10px;
+        align-items: center;
+    }  
+
+
+  /*FOOTER*/
+    .grid-footer{
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1/3fr;
+        grid-template-areas: 
+        "servicios "
+       " ubicacion" 
+        "redes"
+        "copy";
+        grid-column-gap: none;
+       
+    }
+
+    .servicios{
+        margin-left: 27%;
+        font-size: 0.9em;
+       
+    }
+    .ubicacion{
+        margin-left: 27%;
+        font-size: 0.9em;
+    }
+
+    .redes{
+        margin-left: 27%;
+        font-size: 0.9em;
+    }
+
+    .copy p{
+        text-align: center;
+    }
+
+
+    .whats{
+        width: 32px;
+    }
+
+
+}

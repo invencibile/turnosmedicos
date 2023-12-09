@@ -1,0 +1,25 @@
+{%extends turnosmedicos/base.html%}
+{%load static%}
+{%block titulo}Dónde estamos {%endblock}
+{%block extracss%}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/ubicacion.css'%}">
+{%endblock}
+{%block main%}
+
+
+<section class="dondenos">
+    <div class="titulo">
+        <h2>Dónde nos encontramos</h2>
+    </div>
+    <div class="iframemap">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d820.9794206797897!2d-58.3918134!3d-34.606243!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac3c75ff421%3A0x613a7281f272f5a3!2sALFAMEDICA%20MEDICINA%20INTEGRAL%20S.R.L.!5e0!3m2!1ses-419!2sar!4v1698417642170!5m2!1ses-419!2sar"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+
+
+{%endblock}

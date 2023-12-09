@@ -1,0 +1,66 @@
+{%extends turnosmedicos/base.html%}
+{%load static%}
+{%block titulo}Nuestros Profesionales {%endblock}
+{%block extracss%}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estiloprofesion.css'%}">
+{%endblock}
+{%block main%}
+
+
+<h2 class="titulo">Nuestros Profesionales</h2>
+<section class="profesionales">
+    <div class="profesional1">
+        <img src="{%static 'turnosmedicos/img/Foto Dr 3.png'%}" alt="Dra. Jesica Larralde">
+    </div>
+    <div class="descripcion1">
+        <h2>Dra. Jesica Larralde - dentista</h2>
+        <p>La Dra Jesica Larralde es una dentista con más de 6 años de experiencia en el campo de la
+            odontología.
+            Obtuvo su título de doctora en odontología en la Universidad de Buenos Aires en 2016 y completó su
+            residencia en el Hospital Italiano de Buenos Aires.
+            Durante su residencia, la Dra Larralde adquirió experiencia en el diagnóstico y tratamiento de
+            enfermedades orales, como la caries dental, la gingivitis
+            y la periodontitis. Después de completar su residencia, se especializó en ortodoncia y ha trabajado
+            en
+            varios consultorios y clínicas en Buenos Aires. Actualmente, es miembro de la Sociedad Argentina de
+            Ortodoncia y trabaja en su propia clínica dental.
+        </p>
+    </div>
+
+    <div class="profesional2">
+        <img src="{%static 'turnosmedicos/img/Foto Dr 1.png'%}" alt="Dr. Juan F. Pérez">
+    </div>
+    <div class="descripcion2">
+        <h2> Dr. Juan F. Pérez - cardiología</h2>
+        <p>El Dr. Juan Pérez es un médico especialista en cardiología con más de 30 años de experiencia en el
+            campo.
+            de la medicina. Obtuvo su título de doctor en medicina en la Universidad de Buenos Aires en 1988 y
+            completó su residencia en el Hospital Italiano de Buenos Aires. Durante su residencia, el Dr. Pérez
+            adquirió experiencia en el diagnóstico y tratamiento de enfermedades cardiovasculares, como la
+            hipertensión, la insuficiencia cardíaca y la enfermedad coronaria. Después de completar su
+            residencia,
+            el Dr. Pérez se especializó en cardiología y ha trabajado en varios hospitales y clínicas en Buenos
+            Aires. Actualmente, es miembro de la Sociedad Argentina de Cardiología y trabaja en el Hospital
+            Alemán
+            de Buenos Aires.
+        </p>
+    </div>
+
+    <div class="profesional3">
+        <img src="{%static 'turnosmedicos/img/Foto Dr 2.png'%}" alt="Dra. Ángeles Leiva">
+    </div>
+    <div class="descripcion3">
+        <h2>Dra. Ángeles Leiva - oftalmóloga</h2>
+        <p>La Dra Ángeles Leiva es una oftalmóloga con más de 8 años de experiencia en el campo de la
+            oftalmología.Obtuvo su título de doctora en oftalmología en la Universidad del Salvador en 2016 y
+            completó su residencia en el Hospital de clínicas de Buenos Aires.
+            Durante su residencia, la Dra Leiva adquirió experiencia en el diagnóstico y tratamiento de
+            enfermedades.
+            oftalmológicas. Después de completar su residencia, se especializó en cirugía ocular y ha trabajado
+            en varios consultorios y clínicas en Buenos Aires. Actualmente, es miembro de la Sociedad Argentina
+            de
+            Oftalmología y trabaja en su propia clínica.
+        </p>
+    </div>
+</section>
+{%endblock}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img\logo.png">
+    <title>Alfa Consultorios {%block titulo%}{%endblock%}</title>
+    <link rel="stylesheet" href="{%static 'turnosmedicos/css/estilo.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    {%block extracss%}{%endblock}
+</head>
+
+<body>
+    <section class="grid-container">
+        <header class="grid-header">
+            <a href="{%url 'index'%}"><img class="logo" src="{%static 'turnosmedicos/img/logo.png'%}"></a>
+
+            <div class="inicioregistro">
+                <a href="{%url 'iniciosesion'%}">Inicio Sesión</a>
+                <a href="{%url 'form'%}">Registrarse</a>
+            </div>
+        </header>
+
+        <nav class="grid-nav">
+            <ul>
+                <li><a href="{%url 'quienes_somos'%}">Quienes Somos</a></li>
+                <li><a href="{%url 'profesionales'%}">Profesionales</a></li>
+                <li><a href="{%url 'turnos'%}">Turnos</a></li>
+                <li><a href="{%url 'apipage'%}">Pacientes</a></li>
+            </ul>
+        </nav>
+
+        <aside class="grid-section-aside">
+            <div>
+                <img src="{%static 'turnosmedicos/img/swiss.webp'%}" alt="swiss">
+                <img src="{%static 'turnosmedicos/img/osde.webp'%}" alt="osde">
+                <img src="{%static 'turnosmedicos/img/omint.webp'%}" alt="omint">
+                <img src="{%static 'turnosmedicos/img/pasteur.webp'%}" alt="pasteur">
+                <img src="{%static 'turnosmedicos/img/italiano.webp'%}" alt="italiano">
+            </div>
+        </aside>
+
+
+
+        <footer class="grid-footer">
+            <section class="servicios">
+                <ul>
+                    <li><a href="">Contacto</a></li>
+                    <li><a href="">Preguntas Frecuentes</a></li>
+                    <li><a href="">Empleos</a></li>
+                    <li><a href="">Términos y condiciones</a></li>
+                </ul>
+
+            </section>
+            <section class="ubicacion">
+                <h4>Donde Estamos</h4>
+                <p>Rodriguez Peña 237 - C1042 -</p>
+                <p>CABA</p>
+                <a href="{%url 'ubicacion'%}">Ver Mapa</a>
+            </section>
+            <section class="redes">
+                <h4>Redes Sociales</h4>
+                <span>
+                    <a href=""><img src="{%static 'turnosmedicos/img/linkedin.png'%}"></a>
+                    <a href=""><img src="{%static 'turnosmedicos/img/instagram.png'%}"></a>
+                    <a href=""><img src="{%static 'turnosmedicos/img/facebook.png'%}"></a>
+                </span>
+            </section>
+            <section class="copy">
+                <p>Copyright Alfaconsultorios - 2023. Todos los derechos reservados. </p>
+            </section>
+            <a href="https://web.whatsapp.com/" target="_blank"><img src="{%static 'turnosmedicos/img/whatsapp.png'%}"
+                    class="whats"></a>
+        </footer>
+
+    </section>
+
+    <main class="grid-section-main">
+        {%block main%}{%endblock}
+
+    </main>
+
+</body>
+
+</html>

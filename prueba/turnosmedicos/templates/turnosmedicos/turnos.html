@@ -1,0 +1,21 @@
+{%extends turnosmedicos/base.html%}
+{%load static%}
+{%block titulo}Reserva de turnos médicos {%endblock}
+{%block extracss%}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estiloturnos.css'%}">
+{%endblock}
+{%block main%}
+
+    <h2>Reservar turno</h2>
+    <form name="formprofe" method="post" action="">
+      <label>Seleccione su medico del listado de profesionales</label>
+      <select class="selec" name="doctores" onchange="location.href=formprofe.doctores.value;">
+        <option class="opcion1">Profesionales</option>
+        <option value="../pages\form_Larralde.html">Dra. Jesica Larralde</option>
+        <option value="../pages\form_Perez.html">Dr. Juan F. Pérez</option>
+        <option value="../pages\form_Leiva.html">Dra. Ángeles Leiva</option>
+        <option value="../pages\form_Jonte.html">Dr. Carlos Jonte</option>
+        <option value="../pages\form_Neo.html">Dr. Daniel Neo</option>
+      </select>
+    </form>
+    {%endblock}

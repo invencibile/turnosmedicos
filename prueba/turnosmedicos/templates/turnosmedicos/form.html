@@ -1,0 +1,63 @@
+{%extends turnosmedicos/base.html%}
+{%load static%}
+{%block titulo}formulario de registro {%endblock}
+{%block extracss%}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estilosform.css'%}">
+{%endblock}
+{%block main%}
+
+<h2 class="titulo">formulario para la creación de paciente</h2>
+<section class="registro">
+
+    <form action="Link" method="get">
+
+        <label>Nombre</label>
+        <input type="text">
+
+        <label>Apellildo</label>
+        <input type="text">
+
+        <label>fecha de nacimiento:</label><input type="date" name="fecnac">
+
+        <label>Domicilio</label>
+        <input type="text">
+
+        <label>Provincias</label>
+        <select id="selectprovincias">
+            <option value="elige una provincia">Elige una provincia</option>
+
+        </select> <span></span>
+        <label>Municipios</label>
+        <select id="selectmunicipios">
+            <option value="elige una provincia">Elige un Municipio</option>
+
+        </select><span></span>
+        <label>Ciudad</label>
+        <select id="selectlocalidades">
+            <option value="elige una provincia">Elige una Ciudad</option>
+
+        </select><span></span>
+        <label>Teléfono</label>
+        <input type="number">
+
+        <label>Obra Social</label>
+        <select name="ObraSocial" id="Obra Social">
+            <option label="Ninguna" value="Ninguna"></option>
+            <option label="IOMA" value="IOMA"></option>
+            <option label="PAMI" value="PAMI"></option>
+            <option label="OSDE" value="OSDE"></option>
+            <option label="Otra" value="Otraz"></option>
+        </select>
+
+        <label>correo electrónico:</label><input type="email" name="mail">
+
+        <label> contraseña </label>
+        <input type="password" placeholder="Mayúscula, minúscula, número y signo" name="contraseña">
+
+        <p class="acuerdo">Estoy de acuerdo con <a href="#">Terminos y condiciones</a> <input type="checkbox"
+                class="checkbox"></p>
+
+        <input class="submit" type="submit" value="Registrar">
+    </form>
+</section>
+{%endblock}

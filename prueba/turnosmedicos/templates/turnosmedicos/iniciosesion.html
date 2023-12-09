@@ -1,0 +1,25 @@
+{%extends turnosmedicos/base.html%}
+{%load static%}
+{%block titulo}sistema de turnos {%endblock}
+{%block extracss%}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estiloiniciosesion.css'%}">
+{%endblock}
+{%block main%}
+
+<main class="form">
+    <form action="Link" method="get" class="sesion">
+        <label>e-mail:</label>
+        <input type="email">
+
+        <label>contraseña:</label>
+        <input type="password">
+
+        <p class="contrasena"><a href="">¿Olvidaste tu contraseña?</a></p>
+        <input class="submit" type="submit" value="iniciar sesion">
+
+        <p class="crearcuenta">¿No tenés cuenta? <a href="..\pages\form.html">Crear Cuenta</a></p>
+        <form>
+</main>
+
+
+{%endblock}

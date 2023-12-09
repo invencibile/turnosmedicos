@@ -1,0 +1,66 @@
+main{
+    margin-top: 80px;
+    margin-bottom: 220px;
+
+}
+
+
+.selec{
+    border-radius: 5px;
+    height: 35px;
+    background-color: #FFE5E5;
+    /* font: black;  */
+    font-size: 0.9em;
+    
+}
+
+.selec:hover{
+    background-color: transparent;
+     .opcion1{
+        display: none;
+    } 
+}
+
+option{
+    font-size: 1em;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+
+label{
+    display: flex;
+    align-items: center;
+    margin-right: 7px;
+    font-size: 1.1em;
+}
+
+
+@media(min-width:300px) and (max-width:576px){
+
+form{
+ display: block;
+ text-align: center;
+
+}
+
+.selec{
+
+    margin-top: 30px;
+}
+
+label{
+    justify-content: center;
+}
+}
