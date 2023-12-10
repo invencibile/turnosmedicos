@@ -1,0 +1,25 @@
+{%extends "turnosmedicos/base.html" %}
+{%load static%}
+{%block title%}Reserva de turnos médicos {%endblock%}
+{%block extracss%}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estiloturnos.css'%}">
+{%endblock%}
+{%block main%}
+
+<h2>Reservar turno</h2>
+<section>
+
+  {%for Paciente in listado_pacientes %}
+  <article>
+    <p>{{Paciente.nombre}} </p>
+    <p>{{Paciente.apellido}} </p>
+    <p>{{Paciente.mail_paciente}}</p>
+  </article>
+  {% empty %}
+  <article>No hay pacientes cargados</article>
+  {% endfor %}
+  <p>Seleccione su medico del listado de profesionales</p>
+
+</section>
+
+{%endblock%}

@@ -1,15 +1,15 @@
-{%extends turnosmedicos/base.html%}
-{%load static%}
-{%block titulo}sistema de turnos {%endblock}
-{%block extracss%}
-<link rel="stylesheet" href="{%static 'turnosmedicos/css/estilo.css'%}">
-{%endblock}
+{% extends "turnosmedicos/base.html" %}
+{% load static %}
+{% block title %}sistema de turnos {% endblock %}
+{%block extra_css%}
+    <link rel="stylesheet" href="{%static 'turnosmedicos/css/estilo.css' %}">
+{%endblock%}
 {%block main%}
-<img src="img\main1 (1).jpg">
+<img src="{% static 'turnosmedicos/img/main1 (1).jpg' %}">
 <section class="grid-section-consultas">
     <div>
         <p>¿Necesitas consultar o modificar un turno?</p>
-        <a href="{%url 'turnos'%}">Haz click Aquí</a>
+        <a href="{% url 'turnosmedicos' %}">Haz click Aquí</a>
     </div>
 </section>
-{%endblock}
+{%endblock%}

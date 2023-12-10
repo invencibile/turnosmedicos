@@ -6,10 +6,10 @@
 {%endblock%}
 {%block main%}
 
-<h2 class="titulo">formulario para la creación de paciente</h2>
+<h2 class="titulo">formulario para la creación de turnos de un profesional</h2>
 <section class="registro">
 
-    <form method="post" action="{% url 'form' %}" >
+    <form method="post" action="{% url 'form_turno' %}" >
         {% csrf_token %}
         {{form.as_p}}
         <input class="submit" type="submit" value="Registrar">

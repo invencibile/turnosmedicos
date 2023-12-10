@@ -1,0 +1,10 @@
+<!-- SACADO DE TURNOS.HTML -->
+<ul>
+    <li><a href="{% url 'form_borrar' pk=Paciente.id %}">Elimina un paciente</a></li>
+    <li><a href="{% url 'form_borrarespecialidad' pk=Especialidad.id %}">Elimina una  especialidad</a></li>
+    <li><a href="{% url 'form_borrarprofesional' pk=Profesional.id%}">Elimina un profesional</a></li>
+    <li><a href="{% url 'form_borrarhorario' pk=Horario.id%}">Elimina un  horario</a></li>
+    <li><a href="{% url 'form_borrarturno' pk=Turno.id %}">Elimina un turno para paciente</a></li>
+  </ul>
+
+  <li><a href="{% url 'paciente_modifica' pk=Paciente.id %}">Elimina un paciente</a></li>

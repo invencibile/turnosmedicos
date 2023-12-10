@@ -1,0 +1,26 @@
+{%extends "turnosmedicos/base.html" %}
+{%load static%}
+{%block title%}Reserva de turnos médicos {%endblock%}
+{%block extracss%}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estiloturnos.css'%}">
+{%endblock%}
+{%block main%}
+
+<h2>Reservar turno</h2>
+<section>
+
+  {%for Profesional in listadoprofesional %}
+  <article>
+    <p>{{Profesional.nombre}} </p>
+    <p>{{Profesional.apellido}} </p>
+    <p>{{Profesional.matricula}}</p>
+    <p>{{Profesional.especialidad_listado}}</p>
+  </article>
+  {% empty %}
+  <article>No hay Profesionales cargados</article>
+  {% endfor %}
+  <p>Seleccione su medico del listado de profesionales</p>
+
+</section>
+
+{%endblock%}

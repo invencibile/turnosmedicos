@@ -1,0 +1,55 @@
+{%extends "turnosmedicos/base.html" %}
+{% load static %}
+{% block title %}formulario de registro de profesional{%endblock%}
+{% block extra_css %}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estilosform.css'%}">
+{%endblock%}
+{%block main%}
+
+<h2 class="titulo">formulario para la creación de profesional</h2>
+<section class="registro">
+
+    <form action="Link" method="get">
+        <label>Matrícula</label>
+        <input type="text">
+
+        <label>Nombre</label>
+        <input type="text">
+
+        <label>Apellildo</label>
+        <input type="text">
+
+        
+        <label>Especialidad médica</label>
+        <select id="selectespecialidad">
+            <option value="elige una especialidad">Elige una especialidad</option>
+        </select>
+
+        <label>Teléfono</label>
+        <input type="number">
+
+        <label>Obra Social</label>
+        <select name="ObraSocial" id="Obra Social">
+            <option label="Ninguna" value="Ninguna"></option>
+            <option label="IOMA" value="IOMA"></option>
+            <option label="PAMI" value="PAMI"></option>
+            <option label="OSDE" value="OSDE"></option>
+            <option label="Otra" value="Otraz"></option>
+        </select>
+        
+        <label>Tarifa consulta</label>
+        <input type="number">
+
+        <label>correo electrónico:</label><input type="email" name="mail">
+
+        <label> contraseña </label>
+        <input type="password" placeholder="Mayúscula, minúscula, número y signo" name="contraseña">
+
+        <p class="acuerdo">Estoy de acuerdo con <a href="#">Terminos y condiciones</a> <input type="checkbox"
+                class="checkbox"></p>
+
+        <input class="submit" type="submit" value="Registrar">
+    </form>
+    <script src="{%static 'turnosmedicos/js/script.js'%}"></script>
+</section>
+{%endblock%}

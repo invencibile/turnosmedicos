@@ -1,0 +1,25 @@
+{%extends "turnosmedicos/base.html" %}
+{%load static%}
+{%block title%}Reserva de turnos médicos {%endblock%}
+{%block extracss%}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estiloturnos.css'%}">
+{%endblock%}
+{%block main%}
+
+<h2>Reservar turno</h2>
+<section>
+
+  {%for Especialidad in listadoespecialidad %}
+  <article> 
+    <p>{{Especialidad.id_espe}} </p>
+    <p>{{Especialidad.nombre_especialidad}} </p>
+   
+  </article>
+  {% empty %}
+  <article>No hay especialidades cargadas</article>
+  {% endfor %}
+  <p>Seleccione la especialidad buscada</p>
+
+</section>
+
+{%endblock%}

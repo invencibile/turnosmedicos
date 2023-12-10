@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img\logo.png">
+    <title>{% block title %}Alfa Consultorios {% endblock %}</title>
+    {%block extra_css%}{%endblock%}
+</head>
+
+<body>
+    
+        <header>
+            <div >
+                <a href="#">Inicio Sesión</a>
+                <a href="#">Registrarse</a>
+            </div>
+        </header>
+
+        <nav >
+            <ul>
+                <li><a href="#">Quienes Somos</a></li>
+                <li><a href="#">Profesionales</a></li>
+                <li><a href="#">Turnos</a></li>
+                <li><a href="#">Pacientes</a></li>
+            </ul>
+        </nav>
+
+        <aside>
+            <div>
+               <p>esto es el aside</p>
+            </div>
+        </aside>
+
+
+        <main >
+            {% block main%} {%endblock%}
+    
+        </main>
+    
+
+        <footer >
+            <section>
+                <ul>
+                    <li><a href="">Contacto</a></li>
+                    <li><a href="">Preguntas Frecuentes</a></li>
+                    <li><a href="">Empleos</a></li>
+                    <li><a href="">Términos y condiciones</a></li>
+                </ul>
+
+            </section>
+            <section>
+                <h4>Donde Estamos</h4>
+                <p>Rodriguez Peña 237 - C1042 -</p>
+                <p>CABA</p>
+              
+            </section>
+            <section>
+                <h4>Redes Sociales</h4>
+                <span>
+                    <p>redes soc</p>
+                </span>
+            </section>
+            <section >
+                <p>Copyright Alfaconsultorios - 2023. Todos los derechos reservados. </p>
+            </section>
+            
+        </footer>
+  
+
+</body>
+
+</html>

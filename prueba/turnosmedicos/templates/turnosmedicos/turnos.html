@@ -1,21 +1,39 @@
-{%extends turnosmedicos/base.html%}
+{%extends "turnosmedicos/base.html" %}
 {%load static%}
-{%block titulo}Reserva de turnos médicos {%endblock}
+{%block title%}Reserva de turnos médicos {%endblock%}
 {%block extracss%}
 <link rel="stylesheet" href="{%static 'turnosmedicos/css/estiloturnos.css'%}">
-{%endblock}
+{%endblock%}
 {%block main%}
 
-    <h2>Reservar turno</h2>
-    <form name="formprofe" method="post" action="">
-      <label>Seleccione su medico del listado de profesionales</label>
-      <select class="selec" name="doctores" onchange="location.href=formprofe.doctores.value;">
-        <option class="opcion1">Profesionales</option>
-        <option value="../pages\form_Larralde.html">Dra. Jesica Larralde</option>
-        <option value="../pages\form_Perez.html">Dr. Juan F. Pérez</option>
-        <option value="../pages\form_Leiva.html">Dra. Ángeles Leiva</option>
-        <option value="../pages\form_Jonte.html">Dr. Carlos Jonte</option>
-        <option value="../pages\form_Neo.html">Dr. Daniel Neo</option>
-      </select>
-    </form>
-    {%endblock}
+<h1>Reservar turno</h1>
+<h2>{% block section_title %}{% endblock %}</h2>
+<nav>
+  <p><B>LISTADO DE TODO TIPO</B></p>
+  <ul>
+    <li><a href="{% url 'index' %}">Home</a></li>
+    <li><a href="{% url 'paciente_listado' %}">Listado de pacientes</a></li>
+    <li><a href="{% url 'listadoprofesional' %}">Listado de profesionales</a></li>
+    <li><a href="{% url 'listadoespecialidad' %}">Listado de especialidades médicas</a></li>
+    <li><a href="{% url 'listadoHorario' %}">Listado de Horarios</a></li>
+    <li><a href="{% url 'listadoTurno' %}">Listado de Turnos de un profesional</a></li>
+  </ul>
+  <P><B>ALTAS DE TODO TIPO</B></P>
+  <ul>
+    <li><a href="{% url 'form_especialidad' %}">Agregar nueva especialidad</a></li>
+    <li><a href="{% url 'form_profesional' %}">Agregar nuevo profesional</a></li>
+    <li><a href="{% url 'form_horario' %}">Agregar nuevo horario</a></li>
+    <li><a href="{% url 'form_turno' %}">Agregar nuevo turno para paciente</a></li>
+  </ul>
+  <P><B>ELIMINACIONES DE TODO TIPO</B></P>
+  <!--  -->
+  <P><B>MODFICACIONES DE TODO TIPO</B></P>
+  <ul>
+    
+   
+  </ul>
+
+</nav>
+
+
+{%endblock%}

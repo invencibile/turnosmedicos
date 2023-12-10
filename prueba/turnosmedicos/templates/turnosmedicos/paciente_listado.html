@@ -1,0 +1,34 @@
+{%extends "turnosmedicos/base.html" %}
+{%load static%}
+{%block title%}Reserva de turnos médicos {%endblock%}
+{%block extracss%}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estiloturnos.css'%}">
+{%endblock%}
+{%block main%}
+
+<h2>Reservar turno</h2>
+<section>
+
+  {%for paciente in listado_paciente %}
+  <article>
+    <p>{{paciente.nombre}} </p>
+    <p>{{paciente.apellido}} </p>
+    <p>{{paciente.mail_paciente}}</p>
+    <p>{{paciente.obra_social_listado}}</p>
+    <div>
+      <ul>
+        <li><a href="{% url 'iniciosesion anterior' pk=paciente.id %}">lista un paciente</a></li>
+        <li><a href="{% url 'form_modif' pk=paciente.id %}">modifica un paciente</a></li>
+        <li><a href="{% url 'form_borrar' pk=paciente.id %}">Elimina un paciente</a></li>
+      </ul>
+    </div>
+
+  </article>
+  {% empty %}
+  <article>No hay pacientes cargados</article>
+  {% endfor %}
+  <p>Seleccione su paciente</p>
+
+</section>
+
+{%endblock%}

@@ -1,0 +1,27 @@
+{%extends "turnosmedicos/base.html" %}
+{%load static%}
+{%block title%}Reserva de turnos médicos {%endblock%}
+{%block extracss%}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estiloturnos.css'%}">
+{%endblock%}
+{%block main%}
+
+<h2>Reservar turno</h2>
+<section>
+ 
+  <p>{{Turno.dni}}</p>
+  {%for Horario in listadoHorario %}
+  <article>
+    <p>{{Horario.diasem}} </p>
+    <p>{{Horario.hora_desde}} </p>
+    <p>{{Horario.duracion}}</p>
+    <p>{{Horario.matricula}}</p>
+  </article>
+  {% empty %}
+  <article>No hay horarios cargados</article>
+  {% endfor %}
+  <p>Seleccione su horario del listado de profesionales</p>
+
+</section>
+
+{%endblock%}

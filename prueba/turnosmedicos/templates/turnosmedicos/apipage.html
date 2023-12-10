@@ -1,134 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
+{%extends "turnosmedicos/base.html" %}
+{%load static%}
+{%block title%}Comentarios de pacientes {%endblock%}
+{%block extra_css%}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estiloapi.css'%}">
+{%endblock%}
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+{%block main%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestros pacientes</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css\estilo.css">
-    <link rel="stylesheet" href="../css\estiloapi.css">
-    <link rel="icon" href="..\img\logo.png">
+<section class="item1">
+    <h2>Nuestros Pacientes</h2>
+    <ul>
+        <li>
+            <p class="parraf">Acompañamos a nuestros pacientes, brindandoles la mejor atención
+                médica que necesitan.</p>
+        </li>
+        <li>
+            <p class="parraf">Ellos valoran nuestra labor y nos expresan su agradecimiento,
+                siendo esto lo que nos impulsa a seguir mejorando. </p>
+        </li>
+        <li>
+            <p class="parraf">Atendemos a cada miembro de la familia, de diferentes edades, destacando la
+                labor de nuestros pediatras que realizan gran trabajo ocupandose de la salud
+                de los ninos.</p>
+        </li>
+        <li>
+            <p class="parraf">Tenemos un equipo de psicopedagogos trabajando en forma conjunta con
+                escuelas y distintos centros.</p>
+        </li>
+        <li>
+            <p class="parraf">Tambien nuestros queridos abuelos nos manifiestan su aprobacion por la atencion
+                que reciben, gran parte de los abuelos residentes en CABA, asisten a nuestro centro.</p>
+        </li>
+        <li>
+            <p class="parraf">Estan en las mejores manos, las de nuestros especialistas en gerontologia.</p>
+        </li>
+        <li>
+            <p class="parraf"> Agradecemos a todos ustedes por confiar en nosotros y nos comprometemos a seguir
+                trabajando para estar a la altura de la confianza que ustedes depositan en nosotros
+                al dejar en nuestras manos la salud de ustedes y sus familias.</p>
+        </li>
+    </ul>
+</section>
 
-</head>
-
-<body>
-    <header class="grid-header">
-        <a href="..\index.html"><img class="logo" src="..\img\logo.png"></a>
-        <div class="inicioregistro">
-            <a href="..\pages\iniciosesion.html">Inicio Sesión</a>
-            <a href="..\pages\form.html">Registrarse</a>
-        </div>
-    </header>
-
-    <nav class="grid-nav">
-        <ul>
-            <li><a href="..\index.html">Pagina Principal</a></li>
-            <li><a href="..\pages\profesionales.html">Profesionales</a></li>
-            <li><a href="..\pages\turnos.html">Turnos</a></li>
-            <li><a href="..\pages\apipage.html">Pacientes</a></li>
-        </ul>
-    </nav>
-
-    <main class="mainapi">
-        <section class="item1">
-            <h2>Nuestros Pacientes</h2>
-            <ul>
-                <li>
-                    <p class="parraf">Acompañamos a nuestros pacientes, brindandoles la mejor atención
-                        médica que necesitan.</p>
-                </li>
-                <li>
-                    <p class="parraf">Ellos valoran nuestra labor y nos expresan su agradecimiento,
-                        siendo esto lo que nos impulsa a seguir mejorando. </p>
-                </li>
-                <li>
-                    <p class="parraf">Atendemos a cada miembro de la familia, de diferentes edades, destacando la
-                        labor de nuestros pediatras que realizan gran trabajo ocupandose de la salud
-                        de los ninos.</p>
-                </li>
-                <li>
-                    <p class="parraf">Tenemos un equipo de psicopedagogos trabajando en forma conjunta con
-                        escuelas y distintos centros.</p>
-                </li>
-                <li>
-                    <p class="parraf">Tambien nuestros queridos abuelos nos manifiestan su aprobacion por la atencion
-                        que reciben, gran parte de los abuelos residentes en CABA, asisten a nuestro centro.</p>
-                </li>
-                <li>
-                    <p class="parraf">Estan en las mejores manos, las de nuestros especialistas en gerontologia.</p>
-                </li>
-                <li>
-                    <p class="parraf"> Agradecemos a todos ustedes por confiar en nosotros y nos comprometemos a seguir
-                        trabajando para estar a la altura de la confianza que ustedes depositan en nosotros
-                        al dejar en nuestras manos la salud de ustedes y sus familias.</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="item2">
-            <article id="Usuario">
-                <img id="Foto" src="" alt="Foto perfil">
-                <p>"Gracias por la atención"</p>
-                <span id="Name"></span>
-                <span id="LastName"></span>
-            </article>
-            <article clase="Usuario1">
-                <img id="Foto1" src="../img/fotofamilia.jpeg " alt="Foto familia ">
-                <p>"Muy buen servicio"</p>
-                <span>Familia Rio</span>
-            </article>
-            <article clase="Usuario1">
-                <img id="Foto1" src="../img/fotoabuelos.jpeg" alt="Foto abuelos">
-                <p>Hermanos Williams</p>
-            </article>
-        </section>
-    </main>
+<section class="item2">
+    <article id="Usuario">
+        <img id="Foto" src="" alt="Foto perfil">
+        <p>"Gracias por la atención"</p>
+        <span id="Name"></span>
+        <span id="LastName"></span>
+    </article>
+    <article clase="Usuario1">
+        <img id="Foto1" src="{%static 'turnosmedicos/img/fotofamilia.jpeg'%}" alt="Foto familia ">
+        <p>"Muy buen servicio"</p>
+        <span>Familia Rio</span>
+    </article>
+    <article clase="Usuario1">
+        <img id="Foto1" src="{%static 'turnosmedicos/img/fotoabuelos.jpeg'%}" alt="Foto abuelos">
+        <p>Hermanos Williams</p>
+    </article>
+</section>
+</main>
 
 
-    <script>
-        async function pacientes() {
-            const response = await fetch("https://randomuser.me/api");
-            const user = await response.json();
-            document.querySelector("#Usuario #Foto").src = user.results[0].picture.thumbnail;
-            document.querySelector("#Usuario #Name").textContent = user.results[0].name.first;
-            document.querySelector("#Usuario #LastName").textContent = user.results[0].name.last;
-        }
+<script>
+    async function pacientes() {
+        const response = await fetch("https://randomuser.me/api");
+        const user = await response.json();
+        document.querySelector("#Usuario #Foto").src = user.results[0].picture.thumbnail;
+        document.querySelector("#Usuario #Name").textContent = user.results[0].name.first;
+        document.querySelector("#Usuario #LastName").textContent = user.results[0].name.last;
+    }
 
-        pacientes() 
-    </script>
+    pacientes() 
+</script>
 
-
-    <footer class="grid-footer">
-        <div class="servicios">
-            <ul>
-                <li><a href="">Contacto</a></li>
-                <li><a href="">Preguntas Frecuentes</a></li>
-                <li><a href="">Empleos</a></li>
-                <li><a href="">Términos y condiciones</a></li>
-            </ul>
-
-        </div>
-        <div class="ubicacion">
-            <h4>Donde Estamos</h4>
-            <p>Rodriguez Peña 237 - C1042 -</p>
-            <p>CABA</p>
-            <a href="ubicacion.html">Ver Mapa</a>
-        </div>
-        <div class="redes">
-            <h4>Redes Sociales</h4>
-            <span>
-                <a href=""><img src="..\img/linkedin.png"></a>
-                <a href=""><img src="..\img\instagram.png"></a>
-                <a href=""><img src="..\img\facebook.png"></a>
-            </span>
-        </div>
-        <div class="copy">
-            <p>Copyright Alfaconsultorios - 2023. Todos los derechos reservados. </p>
-        </div>
-    </footer>
-    <a href="https://web.whatsapp.com/" target="_blank"><img src="..\img\whatsapp.png" class="whats"></a>
-</body>
-
-</html>
+{%endblock%}
