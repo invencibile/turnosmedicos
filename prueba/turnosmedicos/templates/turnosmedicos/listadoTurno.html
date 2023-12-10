@@ -16,6 +16,13 @@
     <p>{{Turno.duracion}}</p>
     <p>{{Turno.matricula}}</p>
     <p>{{Turno.dni}}</p>
+    <div>
+      <ul>
+        <li><a href="{% url 'iniciosesion anterior' pk=Turno.id %}">lista un turno</a></li>
+        <li><a href="{% url 'modifturno' pk=Turno.id %}">modifica un turno</a></li>
+        <li><a href="{% url 'borrarturno' pk=Turno.id %}">Elimina un turno para paciente y profesional</a></li>
+      </ul>
+    </div>
   </article>
   {% empty %}
   <article>No hay Turnos cargados</article>

@@ -1,0 +1,20 @@
+{%extends "turnosmedicos/base.html" %}
+{% load static %}
+{% block title %}Eliminar paciente {%endblock%}
+{% block extra_css %}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estilosform.css'%}">
+{%endblock%}
+{%block main%}
+
+<h2 class="titulo">formulario para la eliminar un paciente</h2>
+<section class="registro">
+
+    <form method="post"  >
+        {% csrf_token %}
+        <p>Está seguro de eliminar el turno : "{{object.id}}{{object.matricula}}{{object.matricula}}{{object.diasem}}{{object.hora_desde}}"</p>
+        {{form}}
+        <input class="submit" type="submit" value="Confirm">
+    </form>
+    <script src="{%static 'turnosmedicos/js/script.js'%}"></script>
+</section>
+{%endblock%}

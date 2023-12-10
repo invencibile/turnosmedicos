@@ -96,6 +96,12 @@ class PacienteUpdateView(UpdateView):
     fields = '__all__'
     def get_success_url(self):
         return reverse('paciente_listado',kwargs={'pk':self.object.pk})
+class TurnoUpdateView(UpdateView):
+    model = Turno
+    template_name = 'turnosmedicos/modifturno.html'
+    fields = '__all__'
+    def get_success_url(self):
+        return reverse('listadoTurno',kwargs={'pk':self.object.pk})
 
 
 class PacienteDetailView(DetailView):
@@ -124,7 +130,12 @@ class TurnoListView(ListView):
     context_object_name ='listadoTurno'
     template_name = 'turnosmedicos/listadoTurno.html'
 
+
 class PacienteDeleteView(DeleteView):
     model = Paciente
     template_name = 'turnosmedicos/form_borrar.html'
     success_url = reverse_lazy('paciente_listado')
+class TurnoDeleteView(DeleteView):
+    model = Turno
+    template_name = 'turnosmedicos/borrarturno.html'
+    success_url = reverse_lazy('listadoTurno')

@@ -1,0 +1,19 @@
+{%extends "turnosmedicos/base.html" %}
+{% load static %}
+{% block title %}formulario de registro {%endblock%}
+{% block extra_css %}
+<link rel="stylesheet" href="{%static 'turnosmedicos/css/estilosform.css'%}">
+{%endblock%}
+{%block main%}
+
+<h2 class="titulo">formulario para la modificar un turno</h2>
+<section class="registro">
+
+    <form method="post" >
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="submit" type="submit" value="Update">
+    </form>
+    <script src="{%static 'turnosmedicos/js/script.js'%}"></script>
+</section>
+{%endblock%}
