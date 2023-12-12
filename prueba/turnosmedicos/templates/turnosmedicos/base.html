@@ -9,9 +9,12 @@
     <link rel="icon" href="{% static 'turnosmedicos/img/logo.png' %}">
     <title> {% block title %}Alfa Consultorios{% endblock %}</title>
 
-    <link rel="stylesheet" href="{% static 'turnosmedicos/css/estilo.css' %}">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    {%block extra_css%}{%endblock%}
+    <link rel="stylesheet" href="{% static 'turnosmedicos/css/estilo.css' %}">
+    {%block extra_css%}
+    <link rel="stylesheet" href="{% static 'turnosmedicos/css/estilo.css' %}">
+    {%endblock%}
 </head>
 
 <body>
@@ -21,7 +24,7 @@
 
             <div class="inicioregistro">
                 <a href="{% url 'iniciosesion'  %}">Inicio Sesión</a>
-             
+
                 <a href="{% url 'form' %}">Registrarse</a>
             </div>
         </header>

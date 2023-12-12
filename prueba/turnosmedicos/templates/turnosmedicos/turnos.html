@@ -2,12 +2,14 @@
 {%load static%}
 {%block title%}Reserva de turnos médicos {%endblock%}
 {%block extracss%}
-<link rel="stylesheet" href="{%static 'turnosmedicos/css/estiloturnos.css'%}">
+<link rel="stylesheet" href="{%static 'css/estiloturnos.css'%}">
+<link rel="stylesheet" href="{% static 'turnosmedicos/css/estilo.css' %}">
 {%endblock%}
 {%block main%}
 
 <h1>Reservar turno</h1>
 <h2>{% block section_title %}{% endblock %}</h2>
+
 <nav>
   <p><B>LISTADO DE TODO TIPO</B></p>
   <ul>
@@ -24,11 +26,7 @@
     <li><a href="{% url 'form_profesional' %}">Agregar nuevo profesional</a></li>
     <li><a href="{% url 'form_horario' %}">Agregar nuevo horario</a></li>
     <li><a href="{% url 'form_turno' %}">Agregar nuevo turno para paciente</a></li>
-  </ul>
-  <P><B>ELIMINACIONES DE TODO TIPO</B></P>
-  <!--  -->
-  <P><B>MODFICACIONES DE TODO TIPO</B></P>
-  <ul>
+ 
     
    
   </ul>

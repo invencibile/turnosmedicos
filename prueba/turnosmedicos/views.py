@@ -95,7 +95,7 @@ class PacienteUpdateView(UpdateView):
     template_name = 'turnosmedicos/form_modif.html'
     fields = '__all__'
     def get_success_url(self):
-        return reverse('paciente_listado',kwargs={'pk':self.object.pk})
+        return reverse('iniciosesion anterior',kwargs={'pk':self.object.pk})
 class TurnoUpdateView(UpdateView):
     model = Turno
     template_name = 'turnosmedicos/modifturno.html'

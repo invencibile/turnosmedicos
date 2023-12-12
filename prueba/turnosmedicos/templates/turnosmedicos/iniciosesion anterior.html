@@ -7,14 +7,19 @@
 {%block main%}
 
 <main class="form">
+
+    
     <!-- <form action="{% url 'form'%}" method="get">
         {% csrf_token %}
         {{form.as.p}}
         <input class="submit" type="submit" value="Registrar">
     </form> -->
-     <h3>{{object.mail_paciente}}</h3>
-    <h4>{{object.contraseña}}</h4>
-    <p>{{object.nombre}}</p>
+    <BR></BR>
+    <h1><br>DNI {{object.dni}}<br></h1>
+   
+    <h3><br>CONTRASEÑA {{object.contraseña}}<br</h3>
+    <h4><br>NOMBRE {{object.nombre}}<br></h4>
+    <h4><br>E-MAIL {{object.mail_paciente}}<br></h4>
     <!-- <form action="Link" method="get" class="sesion">
         <label>e-mail:</label>
         <input type="email">

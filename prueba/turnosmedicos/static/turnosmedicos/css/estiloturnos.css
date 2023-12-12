@@ -3,8 +3,16 @@ main{
     margin-bottom: 220px;
 
 }
-
-
+section article .botones{
+    background-color: black;
+    color: aquamarine;
+}
+.botones{
+    background-color: black;
+}
+.queso{
+    background-color: rgb(116, 19, 19);
+}
 .selec{
     border-radius: 5px;
     height: 35px;
@@ -13,12 +21,8 @@ main{
     font-size: 0.9em;
     
 }
-
-.selec:hover{
-    background-color: transparent;
-     .opcion1{
-        display: none;
-    } 
+nav p{
+    background-color: aqua;
 }
 
 option{
